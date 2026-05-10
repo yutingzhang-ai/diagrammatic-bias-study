@@ -1,0 +1,44 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+build/
+dist/
+
+# Virtual environments
+venv/
+env/
+.venv/
+.env
+
+# Jupyter
+.ipynb_checkpoints/
+*-checkpoint.ipynb
+
+# PyTorch / experiment artifacts
+*.pt
+*.pth
+*.ckpt
+
+# Generated figures and logs (keep in results/ if you want them tracked)
+*.png
+*.pdf
+!report.pdf
+*.log
+
+# JSON outputs from runs
+final_info.json
+run_*/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editors
+.idea/
+.vscode/
+*.swp
+*.swo
