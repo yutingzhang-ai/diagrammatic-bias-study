@@ -6,8 +6,8 @@ This directory contains the code for the PDE case study: an *architectural* diag
 
 | File | Purpose |
 |---|---|
-| `experiment.py` | Main three-stage protocol: CNN / MaskedCNN / UNet-1L / DB-Fast at matched parameter count (~593k). Produces the slope, OOD-average, and worst-OOD numbers in the report. |
-| `rd_unet2l_n16.py` | Extended ablation that adds UNet-2L (deeper bottleneck) to the comparison. |
+| `experiment.py` |Used for AI-Scientist |
+| `RD_DB_One_seed.ipynb` |Used on Google Colab for one run with one seed |
 
 ## The problem
 
