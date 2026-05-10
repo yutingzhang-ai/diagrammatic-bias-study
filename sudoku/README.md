@@ -6,8 +6,7 @@ This directory contains the code for the Sudoku case study: a *loss-based* diagr
 
 | File | Purpose |
 |---|---|
-| `Sudoku_GT_DB_Colab.ipynb` | Main four-cell ablation: TF / TF+DB / TF+GT / TF+GT+DB. Produces Table 1 and Figure 4 in the report. |
-| `Sudoku_GT_DB_5models_ablation.ipynb` | Extended ablation with additional model variants. |
+| `Sudoku_4Models.ipynb` | Main four-cell ablation: TF / TF+DB / TF+GT / TF+GT+DB. Produces Table 1 and Figure 4 in the report. |
 
 ## The problem
 
@@ -35,30 +34,3 @@ If both biases individually help, what happens when combined?
 
 The data **support H3**: combining DB with GT fails to improve over DB alone, and the gap persists asymptotically.
 
-## Quick start
-
-**Easiest path — Google Colab:**
-1. Open `Sudoku_GT_DB_Colab.ipynb` in Colab
-2. `Runtime → Change runtime type → GPU` (T4 is fine)
-3. `Runtime → Run all`
-
-**Local:**
-```bash
-cd sudoku
-pip install -r requirements.txt
-jupyter notebook Sudoku_GT_DB_Colab.ipynb
-```
-
-Then run all cells. A single Stage-2 seed (1600 epochs) takes roughly 15–25 min on a T4.
-
-## Reproducing report numbers (Table 1)
-
-Three stages, identical conditions across all four cells of {±GT} × {±DB}:
-
-| Stage | Seeds | Epochs |
-|---|---|---|
-| 1 — exploration | 1 | 400 |
-| 2 — statistical confirmation | 4 | 1600 |
-| 3 — convergence confirmation | 2 | 2000 |
-
-Headline at Stage 2: A(TF+DB) = 0.971 > A(TF+GT+DB) = 0.954. The +0.017 gap persists at Stage 3 (+0.0175), confirming the failure-to-compose is asymptotic, not transient.
